@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos ESI — Portal Estudiantil</title>
+
+    <!-- Base + estilos específicos -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/recursos.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR (igual al sitio) ===== -->
+    <header id="header" class="site-header">
+        <div class="container header-row">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://static.wixstatic.com/media/fc75ae_f3fc4f97d17e4e7fbea0d0b881cb8737~mv2.jpg"
+                        class="logo-img" alt="Logo Instituto" />
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cartelera.html">Cartelera</a></li>
+                    <li><a class="active" href="recursos.html">Recursos</a></li>
+                    <li><a href="buzon.html">Buzón Estudiantil</a></li>
+                </ul>
+            </nav>
+
+            <button id="navToggle" class="nav-toggle">☰</button>
+        </div>
+    </header>
+
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="recursos-wrapper">
+
+        <h1 class="recursos-title">Recursos ESI</h1>
+
+        <p class="recursos-description">
+            Aquí vas a encontrar materiales seleccionados por el Equipo de Orientación para seguir trabajando
+            la Educación Sexual Integral: videos, presentaciones, guías y otros recursos para reflexionar sobre vínculos,
+            derechos, cuidado del cuerpo, perspectiva de género y bienestar. Un espacio para aprender, cuestionar
+            y construir miradas más saludables.
+        </p>
+
+        <!-- CAROUSEL -->
+<!-- CARROUSEL -->
+<section class="carousel-section">
+
+    <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-slide">
+            <img src="https://picsum.photos/900/500?random=1" class="active">
+            <img src="https://picsum.photos/900/500?random=2">
+            <img src="https://picsum.photos/900/500?random=3">
+            <img src="https://picsum.photos/900/500?random=4">
+            <img src="https://picsum.photos/900/500?random=5">
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <!-- THUMBNAILS -->
+    <div class="thumbnail-container">
+        <img src="https://picsum.photos/200/120?random=1" data-index="0" class="thumb active-thumb">
+        <img src="https://picsum.photos/200/120?random=2" data-index="1" class="thumb">
+        <img src="https://picsum.photos/200/120?random=3" data-index="2" class="thumb">
+        <img src="https://picsum.photos/200/120?random=4" data-index="3" class="thumb">
+        <img src="https://picsum.photos/200/120?random=5" data-index="4" class="thumb">
+    </div>
+</section>
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Instituto Nuevos Aires — Secundaria Aprende y Participa</p>
+        </div>
+    </footer>
+
+
+    <!-- ===== JS ===== -->
+    <script src="js/recursos.js"></script>
+</body>
+</html>

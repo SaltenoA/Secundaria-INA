@@ -1,0 +1,635 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #122230;
+  background: #ffffff;
+  line-height: 1.45;
+}
+html { scroll-behavior: smooth; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 18px; }
+
+/* ---------------- HEADER ---------------- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 18px 0;
+  z-index: 1200;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  transition: padding .25s ease, box-shadow .25s ease;
+}
+.site-header.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.08);
+}
+.header-row { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 52px; }
+
+/* NAV */
+.nav-list { display: flex; list-style: none; gap: 18px; }
+.nav-list a {
+  text-decoration: none;
+  color: #0b2a3f;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: .2s;
+}
+.nav-list a:hover { background: rgba(0,0,0,0.05); }
+
+.nav-toggle { display: none; cursor: pointer; font-size: 24px; background: none; border: none; }
+
+/* ---------------- HERO ESTILO WIX ---------------- */
+.hero-wix {
+  background: #0B4FA0; /* Azul moderno */
+  padding: 150px 0 150px;
+  text-align: center;
+  color: #fff;
+  margin-top: 82px; /* por header fijo */
+}
+
+.nivel {
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.portal-title {
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.instituto {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.95;
+  margin-bottom: 26px;
+}
+
+.logo-hero {
+  width: 115px;
+  margin-top: 20px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+/* ---------------- INTRO ---------------- */
+.intro {
+  text-align: center;
+  margin: 60px auto 30px;
+  max-width: 800px;
+}
+.intro-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.intro-desc {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------------- CARDS TIPO WIX ---------------- */
+.cards-grid-wix {
+  margin-top: 40px;
+  padding-bottom: 80px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card-wix {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #0B4FA0;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: .25s;
+}
+.overlay-btn:hover {
+  background: #0a3f82;
+  transform: translate(-50%, -52%);
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.45;
+}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer {
+  background: #f5f7fa;
+  text-align: center;
+  padding: 26px 0;
+  color: #556678;
+  font-size: 0.95rem;
+}
+
+/* ----------------------------- */
+/* HERO STYLES MODERNOS */
+/* ----------------------------- */
+
+.hero {
+    background: #0B4FA0;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: heroFade 1.2s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.hero-content h1 {
+    font-size: 3.4rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.hero-content h3,
+.hero-content h4 {
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-logo {
+    width: 150px;
+    margin-top: 35px;
+    opacity: 0;
+    animation: logoFade 1.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* HERO ANIMATIONS */
+@keyframes heroFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoFade {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ----------------------------- */
+/* INTRO TEXT */
+/* ----------------------------- */
+
+.intro-text {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* ----------------------------- */
+/* CARDS */
+/* ----------------------------- */
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0B4FA0;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+/* ----------------------------- */
+/* NAVIGATION HOVER EFFECT */
+/* ----------------------------- */
+
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0B4FA0;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #0B4FA0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* ----------------------------- */
+/* SCROLL REVEAL ANIMATION */
+/* ----------------------------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .portal-title { font-size: 46px; }
+  .hero-wix { padding: 120px 0 120px; }
+  .logo-img { height: 48px; }
+}
+
+@media (max-width: 768px) {
+  .portal-title { font-size: 36px; }
+  .img-box { height: 180px; }
+}
+
+@media (max-width: 420px) {
+  .portal-title { font-size: 30px; }
+  .logo-hero { width: 90px; }
+  .img-box { height: 160px; }
+}
+/* ----------------------------- */
+/* HEADER SHADOW ON SCROLL */
+/* ----------------------------- */
+
+header {
+    transition: box-shadow 0.3s ease, background 0.4s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+
+/* ===== NAV MOBILE FUNCIONAL ===== */
+@media (max-width: 768px) {
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex !important;
+    z-index: 2001;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 12px;
+    min-width: 200px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    z-index: 90;
+
+    /* ESTADO CERRADO */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+  }
+
+  .nav-list.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+/* ========================= */
+/* CARTELERA ESTILO WIX */
+/* ========================= */
+
+.cartelera-page {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.cartelera-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.cartelera-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.cartelera-item {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cartelera-img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.cartelera-img:hover img {
+  transform: scale(1.03);
+}
+
+.cartelera-content {
+  max-width: 600px;
+}
+
+.cartelera-author {
+  font-size: 0.9rem;
+  color: #2b7bb9;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cartelera-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.cartelera-link h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+.cartelera-link:hover h2 {
+  color: #0B4FA0;
+}
+
+.cartelera-excerpt {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* -------- RESPONSIVE -------- */
+
+@media (max-width: 900px) {
+  .cartelera-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cartelera-img img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartelera-title {
+    font-size: 2rem;
+  }
+
+  .cartelera-link h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ========================= */
+/* BUZÓN ESTUDIANTIL */
+/* ========================= */
+
+.buzon-page {
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+
+.buzon-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.buzon-desc {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.buzon-form {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #0b2a3f;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1px solid #bfc5ce;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0B4FA0;
+}
+
+.btn-submit {
+  background: #0B4FA0;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  align-self: center;
+}
+
+.btn-submit:hover {
+  background: #094a87;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .buzon-form { padding: 0 14px; }
+  .buzon-title { font-size: 2rem; }
+}
+
+@media (max-width: 420px) {
+  .buzon-title { font-size: 1.8rem; }
+}
+
+/* ========================= */
+/* BLOG ENTRY (POST INDIVIDUAL) */
+/* ========================= */
+
+.blog-entry-page {
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+
+.blog-entry-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.blog-content {
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  margin-top: 24px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-left: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.blog-content ul li,
+.blog-content ol li {
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  margin-bottom: 18px;
+}
