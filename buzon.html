@@ -55,7 +55,7 @@
       Completá el siguiente formulario y nos pondremos en contacto.
     </p>
 
-    <form class="buzon-form" action="#" method="POST">
+    <form class="buzon-form" action="mailto:ariel.salteno@nuevosaires.edu.ar" method="POST" enctype="text/plain">
 
       <div class="form-group">
         <label for="nombre">Nombre y Apellido</label>
@@ -65,11 +65,6 @@
       <div class="form-group">
         <label for="correo">Correo Electrónico</label>
         <input type="email" id="correo" name="correo" placeholder="Escribí tu email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="telefono">Teléfono (opcional)</label>
-        <input type="text" id="telefono" name="telefono" placeholder="Escribí tu teléfono">
       </div>
 
       <div class="form-group">
@@ -84,6 +79,25 @@
 
       <button type="submit" class="btn-submit">Enviar Mensaje</button>
     </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          let name = document.getElementById("nombre").value.trim();
+          let email = document.getElementById("correo").value.trim();
+          let subject = document.getElementById("motivo").value.trim();
+          let message = document.getElementById("mensaje").value.trim();
+
+          if (nombre && correo && motivo && mensaje) {
+              alert("Formulario enviado con éxito.");
+              this.submit();
+          } else {
+              alert("Por favor, complete todos los campos.");
+          }
+          });
+        });
+    </script>
 
   </main>
 
