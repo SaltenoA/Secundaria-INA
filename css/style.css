@@ -732,7 +732,7 @@ header.scrolled {
 /* ========================= */
 
 .home-cartelera {
-  margin: 80px auto;
+  margin: 30px auto;
 }
 
 .home-cartelera-title {
@@ -820,12 +820,13 @@ header.scrolled {
 /* ========================= */
 
 .slider-section {
-  padding: 80px 0;
+  padding: 0;
   text-align: center;
 }
 
 .slider {
   position: relative;
+  padding-top: 30px;
   max-width: 1000px;
   margin: auto;
 }
@@ -934,6 +935,9 @@ header.scrolled {
 /* Responsive */
 
 @media (max-width: 768px) {
+  .slider{
+    padding-top: 15px;
+  }
   .slides {
     height: 260px;
   }
