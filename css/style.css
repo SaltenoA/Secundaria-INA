@@ -847,7 +847,7 @@ header.scrolled {
 /* ========================= */
 
 .slider-section {
-  padding: 0;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -1146,4 +1146,65 @@ header.scrolled {
   .game-img img {
     max-width: 100%;
   }
+}
+
+/* ========================= */
+/* NOTA TALLER ENTRE PARES */
+/* ========================= */
+
+.nota-taller{
+  max-width:900px;
+  margin: 70px auto;
+  padding: 35px 40px;
+
+  background: #f6f6f6;
+
+  border-radius: 12px;
+
+  box-shadow: 
+  inset 0 2px 8px rgba(0,0,0,0.06),
+  inset 0 -2px 8px rgba(0,0,0,0.04);
+  text-align:center;
+  font-style: oblique;
+}
+
+.nota-preview{
+  font-size:17px;
+  line-height:1.5;
+  color:#444;
+}
+
+.nota-extra{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.6s ease;
+  text-align:center;
+  margin-top:20px;
+}
+
+.nota-extra p{
+  margin-bottom:18px;
+  font-size:17px;
+  line-height:1.5;
+  color:#444;
+}
+
+.nota-extra.active{
+  max-height:1000px;
+}
+
+.nota-btn{
+  margin-top:20px;
+  padding:10px 24px;
+  border:none;
+  background:#111;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.nota-btn:hover{
+  background:#333;
 }

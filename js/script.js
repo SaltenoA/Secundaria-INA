@@ -180,3 +180,18 @@ tabs.forEach(tab => {
   });
 });
 
+const btnNota = document.getElementById("btnNota");
+const notaExtra = document.getElementById("notaExtra");
+
+btnNota.addEventListener("click", () => {
+
+  notaExtra.classList.toggle("active");
+
+  if(notaExtra.classList.contains("active")){
+    btnNota.textContent = "Ver menos";
+  } else {
+    btnNota.textContent = "Lerr Nota completa";
+  }
+
+});
+
