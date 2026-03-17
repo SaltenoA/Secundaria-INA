@@ -161,22 +161,24 @@ revealElements.forEach(el => {
   revealObserver.observe(el);
 });
 
-const tabs = document.querySelectorAll(".pdf-tab");
-const viewer = document.getElementById("pdf-viewer");
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".pdf-tab");
+  const viewer = document.getElementById("pdf-viewer");
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
 
-    // Quitar activo a todos
-    tabs.forEach(t => t.classList.remove("active"));
+      // Quitar activo a todos
+      tabs.forEach(t => t.classList.remove("active"));
 
-    // Activar el clickeado
-    tab.classList.add("active");
+      // Activar el clickeado
+      tab.classList.add("active");
 
-    // Cambiar PDF
-    const file = tab.getAttribute("data-file");
-    viewer.src = file;
+      // Cambiar PDF
+      const file = tab.getAttribute("data-file");
+      viewer.src = file;
 
+    }); 
   });
 });
 
