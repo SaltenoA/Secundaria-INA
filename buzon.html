@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="buzon-body">
 
   <!-- HEADER (igual que las otras páginas) -->
   <header id="header" class="site-header">
@@ -55,50 +55,10 @@
       Completá el siguiente formulario y nos pondremos en contacto.
     </p>
 
-    <form class="buzon-form" action="mailto:ariel.salteno@nuevosaires.edu.ar" method="POST" enctype="text/plain">
-
-      <div class="form-group">
-        <label for="nombre">Nombre y Apellido</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" required>
-      </div>
-
-      <div class="form-group">
-        <label for="correo">Correo Electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="Escribí tu email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="motivo">Motivo o Asunto</label>
-        <input type="text" id="motivo" name="motivo" placeholder="Motivo de tu mensaje" required>
-      </div>
-
-      <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn-submit">Enviar Mensaje</button>
-    </form>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-          event.preventDefault();
-          let name = document.getElementById("nombre").value.trim();
-          let email = document.getElementById("correo").value.trim();
-          let subject = document.getElementById("motivo").value.trim();
-          let message = document.getElementById("mensaje").value.trim();
-
-          if (nombre && correo && motivo && mensaje) {
-              alert("Formulario enviado con éxito.");
-              this.submit();
-          } else {
-              alert("Por favor, complete todos los campos.");
-          }
-          });
-        });
-    </script>
-
+    <iframe 
+      src="https://1roc1udy.forms.app/form/67f69cd6cf251a0002624981"
+      class="buzon-iframe">
+    </iframe>  
   </main>
 
   <!-- FOOTER -->

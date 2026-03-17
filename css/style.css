@@ -1208,3 +1208,26 @@ header.scrolled {
 .nota-btn:hover{
   background:#333;
 }
+
+/* Buzon Estudiantil */
+
+.buzon-iframe {
+  width: 100%;
+  height: 750px;
+  border: none;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Opcional: contenedor más prolijo */
+.buzon-page {
+  margin-top: 130px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buzon-body{
+  background-color: #f1f3f9;
+}
